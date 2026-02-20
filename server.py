@@ -10,7 +10,8 @@ import urllib.parse
 import ssl
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-PORT = 3000
+import os
+PORT = int(os.environ.get('PORT', 3000))
 PAY_TO = '0x71f08aEfe062d28c7AD37344dC0D64e0adF8941E'
 NETWORK = 'eip155:84532'  # Base Sepolia
 
